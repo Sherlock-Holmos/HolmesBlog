@@ -312,7 +312,7 @@ const Style = () => {
         border: none;
         border-radius: 1.7rem;
 
-        background: rgba(255, 255, 255, 0.035);
+        background: rgba(255, 255, 255, 0.02);
 
         -webkit-backdrop-filter:
           blur(7px)
@@ -358,8 +358,8 @@ const Style = () => {
           radial-gradient(
             130px 90px
             at var(--glass-x) var(--glass-y),
-            rgba(255, 255, 255, 0.95) 0%,
-            rgba(255, 255, 255, 0.48) 28%,
+            rgba(255, 255, 255, 0.75) 0%,
+            rgba(255, 255, 255, 0.35) 28%,
             rgba(255, 255, 255, 0.12) 55%,
             transparent 75%
           );

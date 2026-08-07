@@ -109,7 +109,7 @@ const LiquidGlassLink = ({ index, href, title, children }) => {
       if (!width || !height) return
 
       const radius = Math.min(height / 2 - 1, 30)
-      const map = createDisplacementMap(width, height, radius, 14)
+      const map = createDisplacementMap(width, height, radius, 17)
       setFilterData({ width, height, map })
     }
 
@@ -173,7 +173,7 @@ const LiquidGlassLink = ({ index, href, title, children }) => {
               <feDisplacementMap
                 in='SourceGraphic'
                 in2='displacement'
-                scale='13'
+                scale='18'
                 xChannelSelector='R'
                 yChannelSelector='G'
                 result='refracted'
@@ -195,7 +195,7 @@ const LiquidGlassLink = ({ index, href, title, children }) => {
       >
         <span className='liquid-glass-rim' />
         <span className='liquid-glass-highlight' />
-        <span className='relative z-10 text-sm font-medium tracking-wide text-white md:text-base'>
+        <span className='relative z-10 text-sm font-medium tracking-wide text-white md:text-base' style={{ textShadow: '0 1px 2px rgba(0,0,0,0.45), 0 0 8px rgba(0,0,0,0.12)' }}>
           {children}
         </span>
       </SmartLink>
