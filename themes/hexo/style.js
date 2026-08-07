@@ -301,8 +301,112 @@ const Style = () => {
         color: #fff !important;
       }
 
-      #theme-hexo #home-nav-button a:hover {
-        color: #000 !important;
+      /* Apple Liquid Glass 效果 */
+      #theme-hexo .liquid-glass {
+        --glass-x: 35%;
+        --glass-y: 20%;
+
+        position: relative;
+        isolation: isolate;
+
+        border: none;
+        border-radius: 1.7rem;
+
+        background: rgba(255, 255, 255, 0.035);
+
+        -webkit-backdrop-filter:
+          blur(7px)
+          saturate(135%);
+        backdrop-filter:
+          blur(7px)
+          saturate(135%);
+
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.28),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.16);
+
+        transform: translateZ(0);
+
+        transition:
+          transform 220ms cubic-bezier(.2,.8,.2,1),
+          box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+          background 220ms ease;
+      }
+
+      /* Chromium: 使用 SVG displacement 对背后 DOM 进行折射 */
+      @supports (backdrop-filter: url("#test")) {
+        #theme-hexo .liquid-glass {
+          backdrop-filter:
+            var(--glass-filter)
+            saturate(145%)
+            brightness(1.05)
+            contrast(1.03);
+        }
+      }
+
+      /* 动态镜面边缘高光 */
+      #theme-hexo .liquid-glass-rim {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        border-radius: inherit;
+        padding: 1.25px;
+        pointer-events: none;
+
+        background:
+          radial-gradient(
+            130px 90px
+            at var(--glass-x) var(--glass-y),
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.48) 28%,
+            rgba(255, 255, 255, 0.12) 55%,
+            transparent 75%
+          );
+
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+
+      /* 玻璃表面微弱反射 */
+      #theme-hexo .liquid-glass-highlight {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border-radius: inherit;
+        pointer-events: none;
+
+        background:
+          radial-gradient(
+            100px 70px
+            at var(--glass-x) var(--glass-y),
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.025) 45%,
+            transparent 70%
+          );
+
+        mix-blend-mode: screen;
+      }
+
+      /* 悬浮：玻璃浮起而非变白 */
+      #theme-hexo .liquid-glass:hover {
+        background: rgba(255, 255, 255, 0.055);
+        transform:
+          translateY(-2px)
+          scale(1.015);
+        box-shadow:
+          0 15px 34px rgba(0, 0, 0, 0.19),
+          inset 0 1px 0 rgba(255, 255, 255, 0.32),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+      }
+
+      #theme-hexo .liquid-glass:active {
+        transform:
+          translateY(0)
+          scale(0.975);
       }
   `}</style>
   )
