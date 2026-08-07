@@ -28,7 +28,7 @@ const Style = () => {
 
   return (
     <style jsx global>{`
-      #theme-hexo {
+      #theme-hexo-liquid {
         --hexo-color-primary-light: ${primary};
         --hexo-color-primary-dark: ${primaryDark};
         --hexo-color-bg-light: ${background};
@@ -52,7 +52,7 @@ const Style = () => {
         --hexo-color-border: var(--hexo-color-border-light);
       }
 
-      .dark #theme-hexo {
+      .dark #theme-hexo-liquid {
         --theme-color: var(--hexo-color-primary-dark);
         --hexo-color-bg: var(--hexo-color-bg-dark);
         --hexo-color-card: var(--hexo-color-card-dark);
@@ -62,34 +62,34 @@ const Style = () => {
         --hexo-color-border: var(--hexo-color-border-dark);
       }
 
-      #theme-hexo,
-      #theme-hexo .bg-hexo-background-gray {
+      #theme-hexo-liquid,
+      #theme-hexo-liquid .bg-hexo-background-gray {
         background-color: var(--hexo-color-bg);
       }
 
-      #theme-hexo #blog-post-card,
-      #theme-hexo .card,
-      #theme-hexo #announcement-wrapper,
-      #theme-hexo .article {
+      #theme-hexo-liquid #blog-post-card,
+      #theme-hexo-liquid .card,
+      #theme-hexo-liquid #announcement-wrapper,
+      #theme-hexo-liquid .article {
         background-color: var(--hexo-color-card);
         border-color: var(--hexo-color-border);
       }
 
-      #theme-hexo #blog-post-card h2 .menu-link {
+      #theme-hexo-liquid #blog-post-card h2 .menu-link {
         color: var(--hexo-color-title);
       }
 
-      #theme-hexo #blog-post-card main,
-      #theme-hexo #blog-post-card p {
+      #theme-hexo-liquid #blog-post-card main,
+      #theme-hexo-liquid #blog-post-card p {
         color: var(--hexo-color-text);
       }
 
-      #theme-hexo #blog-post-card .text-gray-400 {
+      #theme-hexo-liquid #blog-post-card .text-gray-400 {
         color: var(--hexo-color-text-secondary);
       }
 
       /*  菜单下划线动画 */
-      #theme-hexo .menu-link {
+      #theme-hexo-liquid .menu-link {
         text-decoration: none;
         background-image: linear-gradient(
           var(--theme-color),
@@ -101,155 +101,155 @@ const Style = () => {
         transition: background-size 100ms ease-in-out;
       }
 
-      #theme-hexo .menu-link:hover {
+      #theme-hexo-liquid .menu-link:hover {
         background-size: 100% 2px;
         color: var(--theme-color);
       }
 
       /* 文章列表中标题行悬浮时的文字颜色 */
-      #theme-hexo h2:hover .menu-link {
+      #theme-hexo-liquid h2:hover .menu-link {
         color: var(--theme-color) !important;
       }
-      .dark #theme-hexo h2:hover .menu-link {
+      .dark #theme-hexo-liquid h2:hover .menu-link {
         color: var(--theme-color) !important;
       }
 
       /* 下拉菜单悬浮背景色 */
-      #theme-hexo li[class*='hover:bg-indigo-500']:hover {
+      #theme-hexo-liquid li[class*='hover:bg-indigo-500']:hover {
         background-color: var(--theme-color) !important;
       }
 
       /* tag标签悬浮背景色 */
-      #theme-hexo a[class*='hover:bg-indigo-400']:hover {
+      #theme-hexo-liquid a[class*='hover:bg-indigo-400']:hover {
         background-color: var(--theme-color) !important;
       }
 
       /* 社交按钮悬浮颜色 */
-      #theme-hexo i[class*='hover:text-indigo-600']:hover {
+      #theme-hexo-liquid i[class*='hover:text-indigo-600']:hover {
         color: var(--theme-color) !important;
       }
-      .dark #theme-hexo i[class*='dark:hover:text-indigo-400']:hover {
+      .dark #theme-hexo-liquid i[class*='dark:hover:text-indigo-400']:hover {
         color: var(--theme-color) !important;
       }
 
       /* MenuGroup 悬浮颜色 */
-      #theme-hexo #nav div[class*='hover:text-indigo-600']:hover {
+      #theme-hexo-liquid #nav div[class*='hover:text-indigo-600']:hover {
         color: var(--theme-color) !important;
       }
-      .dark #theme-hexo #nav div[class*='dark:hover:text-indigo-400']:hover {
+      .dark #theme-hexo-liquid #nav div[class*='dark:hover:text-indigo-400']:hover {
         color: var(--theme-color) !important;
       }
 
       /* 最新发布文章悬浮颜色 */
-      #theme-hexo div[class*='hover:text-indigo-600']:hover,
-      #theme-hexo div[class*='hover:text-indigo-400']:hover {
+      #theme-hexo-liquid div[class*='hover:text-indigo-600']:hover,
+      #theme-hexo-liquid div[class*='hover:text-indigo-400']:hover {
         color: var(--theme-color) !important;
       }
 
       /* 分页组件颜色 */
-      #theme-hexo .text-indigo-400 {
+      #theme-hexo-liquid .text-indigo-400 {
         color: var(--theme-color) !important;
       }
-      #theme-hexo .border-indigo-400 {
+      #theme-hexo-liquid .border-indigo-400 {
         border-color: var(--theme-color) !important;
       }
-      #theme-hexo a[class*='hover:bg-indigo-400']:hover {
+      #theme-hexo-liquid a[class*='hover:bg-indigo-400']:hover {
         background-color: var(--theme-color) !important;
         color: white !important;
       }
       /* 移动设备下，搜索组件中选中分类的高亮背景色 */
-      #theme-hexo div[class*='hover:bg-indigo-400']:hover {
+      #theme-hexo-liquid div[class*='hover:bg-indigo-400']:hover {
         background-color: var(--theme-color) !important;
       }
-      #theme-hexo .hover\:bg-indigo-400:hover {
+      #theme-hexo-liquid .hover\:bg-indigo-400:hover {
         background-color: var(--theme-color) !important;
       }
-      #theme-hexo .bg-indigo-400 {
+      #theme-hexo-liquid .bg-indigo-400 {
         background-color: var(--theme-color) !important;
       }
-      #theme-hexo a[class*='hover:bg-indigo-600']:hover {
+      #theme-hexo-liquid a[class*='hover:bg-indigo-600']:hover {
         background-color: var(--theme-color) !important;
         color: white !important;
       }
 
       /* 右下角悬浮按钮背景色 */
-      #theme-hexo .bg-indigo-500 {
+      #theme-hexo-liquid .bg-indigo-500 {
         background-color: var(--theme-color) !important;
       }
-      .dark #theme-hexo .dark\:bg-indigo-500 {
+      .dark #theme-hexo-liquid .dark\:bg-indigo-500 {
         background-color: var(--theme-color) !important;
       }
 
       // 移动设备菜单栏选中背景色
-      #theme-hexo div[class*='hover:bg-indigo-500']:hover {
+      #theme-hexo-liquid div[class*='hover:bg-indigo-500']:hover {
         background-color: var(--theme-color) !important;
       }
 
       /* 文章浏览进度条颜色 */
-      #theme-hexo .bg-indigo-600 {
+      #theme-hexo-liquid .bg-indigo-600 {
         background-color: var(--theme-color) !important;
       }
       /* 当前浏览位置标题高亮颜色 */
-      #theme-hexo .border-indigo-800 {
+      #theme-hexo-liquid .border-indigo-800 {
         border-color: var(--theme-color) !important;
       }
-      #theme-hexo .text-indigo-800 {
+      #theme-hexo-liquid .text-indigo-800 {
         color: var(--theme-color) !important;
       }
-      .dark #theme-hexo .dark\:text-indigo-400 {
+      .dark #theme-hexo-liquid .dark\:text-indigo-400 {
         color: var(--theme-color) !important;
       }
-      .dark #theme-hexo .dark\:border-indigo-400 {
+      .dark #theme-hexo-liquid .dark\:border-indigo-400 {
         border-color: var(--theme-color) !important;
       }
-      .dark #theme-hexo .dark\:border-white {
+      .dark #theme-hexo-liquid .dark\:border-white {
         border-color: var(--theme-color) !important;
       }
       /* 目录项悬浮时的字体颜色 */
-      #theme-hexo a[class*='hover:text-indigo-800']:hover {
+      #theme-hexo-liquid a[class*='hover:text-indigo-800']:hover {
         color: var(--theme-color) !important;
       }
       /* 深色模式下目录项的默认文字颜色和边框线颜色 */
-      .dark #theme-hexo .catalog-item {
+      .dark #theme-hexo-liquid .catalog-item {
         color: white !important;
         border-color: white !important;
       }
-      .dark #theme-hexo .catalog-item:hover {
+      .dark #theme-hexo-liquid .catalog-item:hover {
         color: var(--theme-color) !important;
       }
       /* 深色模式下当前高亮标题的边框线颜色 */
-      .dark #theme-hexo .catalog-item.font-bold {
+      .dark #theme-hexo-liquid .catalog-item.font-bold {
         border-color: var(--theme-color) !important;
       }
 
       /* 文章底部版权声明组件左侧边框线颜色 */
-      #theme-hexo .border-indigo-500 {
+      #theme-hexo-liquid .border-indigo-500 {
         border-color: var(--theme-color) !important;
       }
 
       /* 归档页面文章列表项悬浮时左侧边框线颜色 */
-      #theme-hexo li[class*='hover:border-indigo-500']:hover {
+      #theme-hexo-liquid li[class*='hover:border-indigo-500']:hover {
         border-color: var(--theme-color) !important;
       }
 
       /* 自定义右键菜单悬浮高亮颜色 */
-      #theme-hexo .hover\:bg-blue-600:hover {
+      #theme-hexo-liquid .hover\:bg-blue-600:hover {
         background-color: var(--theme-color) !important;
       }
-      .dark #theme-hexo li[class*='dark:hover:border-indigo-300']:hover {
+      .dark #theme-hexo-liquid li[class*='dark:hover:border-indigo-300']:hover {
         border-color: var(--theme-color) !important;
       }
       /* 深色模式下，归档页面文章列表项默认状态左侧边框线颜色 */
-      .dark #theme-hexo li[class*='dark:border-indigo-400'] {
+      .dark #theme-hexo-liquid li[class*='dark:border-indigo-400'] {
         border-color: var(--theme-color) !important;
       }
       /* 深色模式下，归档页面文章标题悬浮时的文字颜色 */
-      .dark #theme-hexo a[class*='dark:hover:text-indigo-300']:hover {
+      .dark #theme-hexo-liquid a[class*='dark:hover:text-indigo-300']:hover {
         color: var(--theme-color) !important;
       }
 
       /* 设置了从上到下的渐变黑色 */
-      #theme-hexo .header-cover::before {
+      #theme-hexo-liquid .header-cover::before {
         content: '';
         position: absolute;
         top: 0;
@@ -295,14 +295,118 @@ const Style = () => {
         scrollbar-color: var(--theme-color) transparent;
       }
 
-      ${themeConsoleStyle('hexo', CONFIG)}
+      ${themeConsoleStyle('hexo-liquid', CONFIG)}
 
-      #theme-hexo #home-nav-button a {
+      #theme-hexo-liquid #home-nav-button a {
         color: #fff !important;
       }
 
-      #theme-hexo #home-nav-button a:hover {
-        color: #000 !important;
+      /* Apple Liquid Glass 效果 */
+      #theme-hexo-liquid .liquid-glass {
+        --glass-x: 35%;
+        --glass-y: 20%;
+
+        position: relative;
+        isolation: isolate;
+
+        border: none;
+        border-radius: 1.7rem;
+
+        background: rgba(255, 255, 255, 0.02);
+
+        -webkit-backdrop-filter:
+          blur(7px)
+          saturate(135%);
+        backdrop-filter:
+          blur(7px)
+          saturate(135%);
+
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.28),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.16);
+
+        transform: translateZ(0);
+
+        transition:
+          transform 220ms cubic-bezier(.2,.8,.2,1),
+          box-shadow 220ms cubic-bezier(.2,.8,.2,1),
+          background 220ms ease;
+      }
+
+      /* Chromium: 使用 SVG displacement 对背后 DOM 进行折射 */
+      @supports (backdrop-filter: url("#test")) {
+        #theme-hexo-liquid .liquid-glass {
+          backdrop-filter:
+            var(--glass-filter)
+            saturate(145%)
+            brightness(1.05)
+            contrast(1.03);
+        }
+      }
+
+      /* 动态镜面边缘高光 */
+      #theme-hexo-liquid .liquid-glass-rim {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        border-radius: inherit;
+        padding: 1.25px;
+        pointer-events: none;
+
+        background:
+          radial-gradient(
+            130px 90px
+            at var(--glass-x) var(--glass-y),
+            rgba(255, 255, 255, 0.75) 0%,
+            rgba(255, 255, 255, 0.35) 28%,
+            rgba(255, 255, 255, 0.12) 55%,
+            transparent 75%
+          );
+
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+
+      /* 玻璃表面微弱反射 */
+      #theme-hexo-liquid .liquid-glass-highlight {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border-radius: inherit;
+        pointer-events: none;
+
+        background:
+          radial-gradient(
+            100px 70px
+            at var(--glass-x) var(--glass-y),
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.025) 45%,
+            transparent 70%
+          );
+
+        mix-blend-mode: screen;
+      }
+
+      /* 悬浮：玻璃浮起而非变白 */
+      #theme-hexo-liquid .liquid-glass:hover {
+        background: rgba(255, 255, 255, 0.055);
+        transform:
+          translateY(-2px)
+          scale(1.015);
+        box-shadow:
+          0 15px 34px rgba(0, 0, 0, 0.19),
+          inset 0 1px 0 rgba(255, 255, 255, 0.32),
+          inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+      }
+
+      #theme-hexo-liquid .liquid-glass:active {
+        transform:
+          translateY(0)
+          scale(0.975);
       }
   `}</style>
   )
